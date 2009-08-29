@@ -1,0 +1,31 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler"
+	xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson"
+	xmlns:f="/lib/form">
+	<f:section title="Global Campfire Settings">
+		<f:entry title="ID" help="/plugin/campfire/help-global-id.html">
+			<input class="setting-input" name="campfire.id" type="text"
+				value="${descriptor.id}" />
+		</f:entry>
+		<f:entry title="Password" help="/plugin/campfire/help-global-password.html">
+			<input class="setting-input" name="campfire.password"
+				type="password" value="${campfire.password}" />
+		</f:entry>
+                <f:entry title="Campfire Domain" help="/plugin/campfire/help-global-id.html">
+			<input class="setting-input" name="campfire.domain" type="text"
+				value="${descriptor.domain}" />
+		</f:entry>
+                <f:entry title="Room" help="/plugin/campfire/help-global-id.html">
+			<input class="setting-input" name="campfire.room" type="text"
+				value="${descriptor.room}" />
+		</f:entry>
+		
+		<f:entry title="Only Tweet on Failure or Recovery?" help="/plugin/campfire/help-global-failure.html">
+		    <f:checkbox name="campfire.onlyOnFailureOrRecovery" checked="${descriptor.onlyOnFailureOrRecovery}" />
+		</f:entry>
+		
+		<f:entry title="Include the Build URL in the Tweet?" help="/plugin/campfire/help-global-url.html">
+		    <f:checkbox name="campfire.includeUrl" checked="${descriptor.includeUrl}" />
+		</f:entry>
+		
+	</f:section>
+</j:jelly>
