@@ -99,8 +99,9 @@ public class CampfirePublisher extends Publisher {
 
 
     @SuppressWarnings("unchecked")
+    @Override
 	public boolean perform(AbstractBuild build, Launcher launcher, BuildListener listener) {
-        return _perform(build, launcher, listener);
+            return _perform(build, launcher, listener);
     }
 
     protected <P extends AbstractProject<P, B>, B extends AbstractBuild<P, B>> boolean _perform(

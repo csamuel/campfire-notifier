@@ -15,8 +15,8 @@ public class RubyLauncherTest {
         root.put("email", "dasnotifier@gmail.com");
         root.put("password", "Dtaivr2011");
         root.put("domain", "teamdas");
-        root.put("room_name", "DAS");
-        root.put("message", "Here we go!\n \tThis is great!");
+        root.put("room_name", "DAS Build");
+        root.put("message", "Unit test");
         RubyLauncher launcher = new RubyLauncher("ruby/boot", "Boot", "start");
         launcher.call(root);
     }
